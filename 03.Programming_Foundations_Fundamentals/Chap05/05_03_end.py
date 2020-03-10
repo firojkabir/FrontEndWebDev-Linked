@@ -9,4 +9,4 @@ def wash_car(amount_paid):
         print("Rinse once")
         print("Air dry") 
 
-wash_car(6) 
+wash_car(12) 

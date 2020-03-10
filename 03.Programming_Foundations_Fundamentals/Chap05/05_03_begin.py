@@ -6,3 +6,5 @@ def wash_car():
     print("Wash with white foam")
     print("Rinse once")
     print("Air dry") 
+
+wash_car()

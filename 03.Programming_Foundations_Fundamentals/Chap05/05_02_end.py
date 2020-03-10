@@ -4,3 +4,5 @@ def say_hello():
 say_hello()
 say_hello()
 say_hello()
+say_hello()
+say_hello()
