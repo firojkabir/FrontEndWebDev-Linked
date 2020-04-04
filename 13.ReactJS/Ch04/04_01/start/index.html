@@ -5,36 +5,39 @@
         <script src="https://unpkg.com/react@16.7.0/umd/react.development.js"></script>
         <script src="https://unpkg.com/react-dom@16.7.0/umd/react-dom.development.js"></script>
         <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
         <style>
             .heading {
-                color: purple;
+                color: brown;
             }
         </style>
-    
     </head>
     <body>
         <div id="root"></div>
         <script type="text/babel">
-            
-            const Lake = ({name}) => <h1>{name}</h1>;
+
+            const Lake = ({name}) => <h1 className="heading">{name}</h1>;
 
             class App extends React.Component {
                 state = {
                     loggedIn: false
                 }
+                logIn = () => this.setState({loggedIn: true})
+                logOut = () => this.setState({loggedIn: false})
                 render() {
                     return (
                         <div>
-                            <div>The user is {this.state.loggedIn ? "logged in" : "not logged in"}.</div>
-                            <Lake name="Lake Tahoe" />
-                            <Lake name="Angora Lake" />
-                            <Lake name="Shirley Lake" />
-                            <Lake name="Cathedral Lake" />
+                            <button onClick={this.logIn}>Log In</button>
+                            <p>The user is {this.state.loggedIn ? "logged in" : "not logged in"}.</p>
+                            <button onClick={this.logOut}>Log Out</button>
+                            <Lake name="Dhanmondi Lake!" />
+                            <Lake name="Gulshan Lake!" />
+                            <Lake name="Mirpur Lake!" />
                         </div>
                     )
                 }
             }
-            
+                
             ReactDOM.render(
                 <App />,
                 document.getElementById("root")

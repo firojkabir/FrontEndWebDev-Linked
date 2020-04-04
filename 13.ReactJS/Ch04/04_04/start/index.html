@@ -5,41 +5,38 @@
         <script src="https://unpkg.com/react@16.7.0/umd/react.development.js"></script>
         <script src="https://unpkg.com/react-dom@16.7.0/umd/react-dom.development.js"></script>
         <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
         <style>
-            .heading {
-                color: purple;
+            .heading01 {
+                color: brown;
+            }
+            .heading02 {
+                color:darkseagreen;
             }
         </style>
-    
     </head>
     <body>
         <div id="root"></div>
         <script type="text/babel">
             
             const lakeList = [
-                "Echo Lake", 
-                "Maud Lake", 
-                "Cascade Lake"
+                {id: 1, name: "Dhanmondi Lake", trailhead: "Dhanmondi"},
+                {id: 2, name: "Gulshan Lake", trailhead: "Gulshan"},
+                {id: 3, name: "Mirpur Lake", trailhead: "Mirpur"}
             ];
 
             const App = ({lakes}) => (
                 <ul>
-                    {lakes.map((lake, i) => 
-                        <li key={i}>{lake}</li>    
+                    {lakes.map(lake =>
+                        <li key={lake.id}>{lake.name} | trailhead: {lake.trailhead}</li>
                     )}
                 </ul>
             )
-            
+                
             ReactDOM.render(
                 <App lakes={lakeList}/>,
                 document.getElementById("root")
             );
-
-
-
-
-
-
         </script>
     </body>
 </html>
