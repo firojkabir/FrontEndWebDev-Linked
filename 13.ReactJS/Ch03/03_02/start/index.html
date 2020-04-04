@@ -5,27 +5,34 @@
         <script src="https://unpkg.com/react@16.7.0/umd/react.development.js"></script>
         <script src="https://unpkg.com/react-dom@16.7.0/umd/react-dom.development.js"></script>
         <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
         <style>
             .heading {
-                color: purple;
+                color: brown;
             }
         </style>
-    
     </head>
     <body>
         <div id="root"></div>
         <script type="text/babel">
+            const Welcome = ({library, message}) => 
+                //process 1
+                // <div className="heading">
+                //     <h1>Welcome to Frankfurt!</h1>
+                // </div>
             
-            const Hello = () => {
+            //process 2
+            {
                 return (
                     <div className="heading">
-                    <h1>Welcome to React</h1>
+                        <h1>Welcome to {library}</h1>
+                        <p>{message}</p>
                     </div>
                 )
-            };
-            
+            }
+
             ReactDOM.render(
-                <Hello />,
+                <Welcome library="React" message="Enjoy coding!"/>,
                 document.getElementById("root")
             );
         </script>
