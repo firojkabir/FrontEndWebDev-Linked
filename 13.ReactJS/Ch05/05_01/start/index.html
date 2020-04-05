@@ -19,24 +19,11 @@
         <div id="root"></div>
         <script type="text/babel">
             
-            const lakeList = [
-                {id: 1, name: "Dhanmondi Lake", trailhead: "Dhanmondi"},
-                {id: 2, name: "Gulshan Lake", trailhead: "Gulshan"},
-                {id: 3, name: "Mirpur Lake", trailhead: "Mirpur"}
-            ];
+            
 
-            const App = ({lakes}) => (
-                <ul>
-                    {lakes.map(lake =>
-                        <li key={lake.id}>{lake.name} | trailhead: {lake.trailhead}</li>
-                    )}
-                </ul>
-            )
+            
                 
-            ReactDOM.render(
-                <App lakes={lakeList}/>,
-                document.getElementById("root")
-            );
+            
         </script>
     </body>
 </html>
